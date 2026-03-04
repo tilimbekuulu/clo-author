@@ -5,9 +5,9 @@
      Keep this file under ~150 lines — Claude loads it every session.
      See the guide at https://hsantanna88.github.io/clo-author/ for full documentation. -->
 
-**Project:** [YOUR PROJECT NAME]
-**Institution:** [YOUR INSTITUTION]
-**Branch:** main
+**Project:** The COVID-19 Shock to Primary Education: Cross-Cohort Evidence from Ukraine's State Monitoring Programme
+**Institution:** Central European University, Vienna, Austria
+**Branch:** master
 
 ---
 
@@ -134,7 +134,12 @@ See `scoring-protocol.md` for weighted aggregation formula.
 
 | Component | File | Status | Description |
 |-----------|------|--------|-------------|
-| Paper | `Paper/main.tex` | [draft/submitted/R&R] | [Brief description] |
-| Data | `scripts/R/` | [complete/in-progress] | [Analysis description] |
-| Replication | `Replication/` | [not started/ready] | [Deposit status] |
-| Job Market Talk | `Talks/job_market_talk.tex` | -- | [Status] |
+| Paper (PDF draft) | `master_supporting_docs/supporting_papers/Impact_of_Covid_on_Primary_education__Evidence_from_Ukraine (22).pdf` | draft | 11-page draft; intro/background/data/results complete |
+| Paper (LaTeX) | `Paper/main.tex` | in-progress | Needs to mirror PDF draft |
+| Robustness section | `Paper/sections/robustness.tex` | missing | Reweighting, compositional change sensitivity |
+| Heterogeneity section | `Paper/sections/heterogeneity.tex` | missing | By SES, rural/urban, remote learning duration |
+| Conclusion | `Paper/sections/conclusion.tex` | missing | Discussion + policy implications |
+| Data | `Data/` | available | Ukraine State Monitoring 2018 + 2021 waves |
+| Scripts | `scripts/R/` | unknown | Need to locate/create analysis scripts |
+| Bibliography | `Bibliography_base.bib` | needs update | Add all references from PDF draft |
+| Replication | `Replication/` | not started | -- |

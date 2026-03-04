@@ -1,0 +1,118 @@
+%% ============================================================
+%% The COVID-19 Shock to Primary Education:
+%% Cross-Cohort Evidence from Ukraine's State Monitoring Programme
+%% Main paper file — authoritative source of truth
+%% ============================================================
+
+\documentclass[12pt]{article}
+
+%% Preamble
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{threeparttable}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{xcolor}
+\usepackage{siunitx}
+
+%% Page layout
+\geometry{margin=1in}
+\doublespacing
+
+%% Hyperlink setup
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = blue,
+  citecolor  = blue,
+  urlcolor   = blue
+}
+
+%% ============================================================
+\begin{document}
+
+\title{The COVID-19 Shock to Primary Education:\\
+       Cross-Cohort Evidence from Ukraine's\\
+       State Monitoring Programme\thanks{[ACKNOWLEDGMENTS]}}
+
+\author{Talgat Ilimbek uulu\\
+        Central European University, Vienna, Austria\\
+        \texttt{talgat-ilimbek\_uulu@ceu.phd.edu}}
+
+\date{March 2026}
+
+\maketitle
+
+%% ============================================================
+\begin{abstract}
+\noindent
+This paper estimates COVID-19-related learning losses among Ukrainian primary students
+using two waves of nationally representative assessments administered before (May 2018)
+and after (May 2021) extended school closures. Average mathematics scores declined by
+0.09 standard deviations after controlling for region, school type, and student socioeconomic
+background, equivalent to roughly one-fifth of a typical school year. Reading scores declined
+by a similar magnitude (0.09--0.10 SD). These losses occurred despite substantial variation in
+remote-instruction practices: nearly half of students experienced 1--2 months of distance
+learning, while 13 percent were exposed for three months or longer. The findings contribute
+scarce evidence on pandemic-related educational disruption in middle-income countries
+and suggest that Ukraine's primary students experienced learning setbacks comparable to
+those documented in other national contexts.
+
+\medskip
+\noindent \textbf{JEL Codes:} I21, I24
+
+\medskip
+\noindent \textbf{Keywords:} COVID-19, learning loss, primary education, Ukraine
+\end{abstract}
+
+\newpage
+
+%% ============================================================
+\section{Introduction}
+\label{sec:intro}
+\input{sections/introduction}
+
+%% ============================================================
+\section{Background}
+\label{sec:background}
+\input{sections/background}
+
+%% ============================================================
+\section{Data and Sample Characteristics}
+\label{sec:data}
+\input{sections/data}
+
+%% ============================================================
+\section{Measuring Learning Loss}
+\label{sec:results}
+\input{sections/results}
+
+%% ============================================================
+\section{Robustness and Sensitivity}
+\label{sec:robustness}
+\input{sections/robustness}
+
+%% ============================================================
+\section{Heterogeneity}
+\label{sec:heterogeneity}
+\input{sections/heterogeneity}
+
+%% ============================================================
+\section{Discussion and Conclusion}
+\label{sec:conclusion}
+\input{sections/conclusion}
+
+%% ============================================================
+\bibliographystyle{aer}
+\bibliography{../Bibliography_base}
+
+\end{document}

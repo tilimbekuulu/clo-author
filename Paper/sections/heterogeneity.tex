@@ -1,0 +1,203 @@
+%% heterogeneity.tex — Section 6: Heterogeneity
+%%
+%% [INSERT] markers requiring filled values:
+%%   Table 8 (or inline): gender × May2021 interaction estimates (6.1)
+%%   Table 8 (or inline): rural × May2021 interaction estimates (6.2)
+%%   Table 8 (or inline): SES tertile × May2021 interaction estimates (6.3)
+%%   Table 9: remote learning duration estimates among 2021 students (6.4)
+%%   [INSERT: interaction coefficient] throughout — replace with actual estimates
+%%
+%% Equation (2) is the augmented interaction specification.
+%% Equation (3) is the within-2021 remote-duration specification.
+
+The main estimates in Section~\ref{sec:results} identify the average
+cross-cohort gap for the full sample. I now examine whether that gap
+varies systematically across student subgroups. For binary characteristics,
+I augment Equation~(1) with an interaction term:
+
+\begin{equation}
+Y_{irt} = \alpha_r + \beta_1 \cdot \mathit{May2021}_t
+          + \beta_2 \cdot Z_i
+          + \beta_3 \cdot (\mathit{May2021}_t \times Z_i)
+          + X'_{irt} \beta_4 + \varepsilon_{irt},
+\label{eq:interaction}
+\end{equation}
+
+\noindent where $Z_i$ is the characteristic of interest, $X_{irt}$
+retains the full control set of Equation~(1), and $\beta_3$ identifies
+whether the cross-cohort gap differs for students with $Z_i = 1$
+relative to those with $Z_i = 0$. Region fixed effects $\alpha_r$ and
+school-level clustered standard errors are maintained throughout.
+The main effect $\beta_1$ now represents the gap for the reference group
+($Z_i = 0$), and $\beta_1 + \beta_3$ is the gap for students with
+$Z_i = 1$. All interactions are estimated separately for mathematics and
+reading.
+
+\subsection{Gender}
+\label{subsec:gender}
+
+Table~5 shows a large female advantage in reading of 0.288~SD, a pattern
+well documented in early literacy research \citep{fryer2010empirical}.
+In mathematics, the baseline gender gap is small and statistically
+indistinguishable from zero ($-0.012$~SD for girls relative to boys).
+I test whether the pandemic widened or narrowed these gender gaps by
+estimating Equation~(\ref{eq:interaction}) with $Z_i =
+\mathit{Female}_i$.
+
+The interaction estimates appear in Table~8. For
+mathematics, $\hat{\beta}_3 =$ XX.XX~SD (SE = XX.XX, XX). %% PLACEHOLDER
+For reading, $\hat{\beta}_3 =$ XX.XX~SD (SE = XX.XX, XX). %% PLACEHOLDER
+XX.XX. %% PLACEHOLDER: 1-2 sentence interpretation of gender result
+
+The international literature on gender heterogeneity in pandemic learning
+losses is mixed. \citet{betthaeuser2023systematic} report no consistent
+pattern across high-income countries. Evidence from low- and
+middle-income countries is thinner, but \citet{patrinos2022analysis}
+document similarly modest gender differences in their multi-country
+analysis. The Ukraine estimates are XX.XX %% PLACEHOLDER: consistent/inconsistent
+with this pattern.
+
+\subsection{Rural/Urban Location}
+\label{subsec:rural}
+
+Rural students in Ukraine perform substantially below their urban peers:
+Table~5 reports a gap of $-0.379$~SD in mathematics and $-0.290$~SD in
+reading after full controls. Remote instruction during the pandemic
+plausibly widened this gap further. Rural schools in Ukraine face
+persistent disadvantages in digital infrastructure and household internet
+access, both of which are necessary conditions for effective distance
+learning. Ukraine's national broadband statistics show substantially lower
+coverage rates outside oblast centres, and the teacher questionnaire
+responses confirm that remote learning was less uniformly implemented
+in rural schools.
+
+I estimate Equation~(\ref{eq:interaction}) with $Z_i = \mathit{Rural}_i$.
+The interaction $\hat{\beta}_3$ measures whether rural students
+experienced a larger cross-cohort decline than urban students. The
+estimates are reported in Table~8.
+
+For mathematics, $\hat{\beta}_3 =$ XX.XX~SD (SE = XX.XX, XX). %% PLACEHOLDER
+For reading, $\hat{\beta}_3 =$ XX.XX~SD (SE = XX.XX, XX). %% PLACEHOLDER
+XX.XX. %% PLACEHOLDER: 1-2 sentence interpretation of rural result
+
+The rural--urban dimension deserves particular attention in the Ukrainian
+context. Prior to the pandemic, rural schools already contended with
+teacher shortages and larger class sizes in remote oblasts
+\citep[see][]{world_bank2021ukraine}. A significant interaction would
+imply that pandemic losses compounded pre-existing structural
+inequalities, with consequences for remediation targeting.
+
+\subsection{Socioeconomic Status}
+\label{subsec:ses}
+
+A central finding in the international literature is that pandemic
+learning losses were disproportionately large for disadvantaged students.
+\citet{betthaeuser2023systematic} estimate that losses in studies
+stratified by SES were on average larger for low-SES students by
+approximately 0.05~SD across 42 studies. \citet{engzell2021learning}
+document a gradient in the Netherlands whereby students from lower-educated
+households experienced steeper losses during the lockdown period.
+
+To assess the SES gradient in Ukraine, I extend Equation~(\ref{eq:interaction})
+to include separate interactions for the SES-middle and SES-high tertile
+dummies interacted with $\mathit{May2021}_t$, with SES-low as the omitted
+reference group. The estimated interactions thus represent whether the
+cross-cohort gap was smaller or larger for students in higher SES tertiles
+relative to the lowest tertile.
+
+Table~8 reports the SES interaction estimates. For mathematics:
+\begin{itemize}
+  \item SES-middle $\times$ May2021: $\hat{\beta}_3 =$ XX.XX~SD
+        (SE = XX.XX, XX) %% PLACEHOLDER
+  \item SES-high $\times$ May2021: $\hat{\beta}_3 =$ XX.XX~SD
+        (SE = XX.XX, XX) %% PLACEHOLDER
+\end{itemize}
+For reading:
+\begin{itemize}
+  \item SES-middle $\times$ May2021: $\hat{\beta}_3 =$ XX.XX~SD
+        (SE = XX.XX, XX) %% PLACEHOLDER
+  \item SES-high $\times$ May2021: $\hat{\beta}_3 =$ XX.XX~SD
+        (SE = XX.XX, XX) %% PLACEHOLDER
+\end{itemize}
+XX.XX. %% PLACEHOLDER: 1-2 sentence interpretation of SES gradient result
+
+One important caveat applies to this analysis. As documented in
+Section~\ref{sec:data}, the SES composition of the 2021 sample shifted
+substantially toward higher tertiles relative to 2018. If low-SES
+students disproportionately exited the 2021 sample --- precisely because
+they were most affected by the disruption --- then the observed interaction
+coefficients underestimate the true SES gradient in learning losses.
+The reweighting exercise in Section~\ref{subsec:ipw} partially addresses
+this concern but cannot fully recover the experiences of students who
+were not tested.
+
+\subsection{Remote Learning Duration}
+\label{subsec:remote}
+
+A distinctive feature of the 2021 wave is that the teacher questionnaire
+collected information on the duration of remote instruction experienced
+by each class during the 2019--20 and 2020--21 academic years. This
+allows a within-2021 analysis of whether longer exposure to distance
+learning is associated with lower test scores, conditional on all other
+observables.
+
+The distribution of remote learning exposure is as follows: 9.9 percent
+of students were in classes that reported zero months of remote
+instruction; 29.2 percent experienced less than one month; 48.2 percent
+experienced 1--2 months; 10.3 percent experienced 3--4 months; and
+2.4 percent experienced five or more months. The modal category --- nearly
+half of all students --- reflects the national pattern of reopening in
+autumn 2020 after the spring 2020 closure, with adaptive quarantine
+protocols in most regions.
+
+Because remote learning duration is observed only in the 2021 wave, I
+estimate its association with achievement among 2021 students only.
+Let $R_{ic}$ denote the remote learning duration category for student
+$i$ in class $c$, and define indicator variables for each category with
+the ``less than one month'' group as the reference. The estimating
+equation is:
+
+\begin{equation}
+\begin{split}
+Y_{irt} &= \gamma_0 + \gamma_1 \cdot \mathbf{1}[R_{ic} = 0]
+           + \gamma_2 \cdot \mathbf{1}[R_{ic} \in \{1{-}2\}] \\
+        &\quad + \gamma_3 \cdot \mathbf{1}[R_{ic} \in \{3{-}4\}]
+           + \gamma_4 \cdot \mathbf{1}[R_{ic} \geq 5]
+           + X'_{irt} \delta + \alpha_r + \varepsilon_{irt},
+\end{split}
+\label{eq:remote}
+\end{equation}
+
+\noindent where $\mathbf{1}[\cdot]$ denotes indicator functions for
+duration categories and $X_{irt}$, $\alpha_r$ retain their definitions
+from Equation~(1). Standard errors are clustered at the school level.
+Note that Equation~(\ref{eq:remote}) is estimated in the 2021 sample
+only; it does not identify the effect of remote learning relative to
+in-person instruction in the counterfactual sense, but rather the
+conditional association between remote duration and achievement among
+students who experienced the pandemic.
+
+The estimates appear in Table~9. Students in classes reporting 3--4
+months of remote instruction scored XX.XX~SD lower in mathematics than
+those in classes with less than one month of exposure (SE = XX.XX,
+$p < $ XX.XX). %% PLACEHOLDER
+The association in reading is XX.XX~SD (SE = XX.XX). %% PLACEHOLDER
+Students in classes with five or more months of remote instruction ---
+a small share of the sample --- show the largest deficit: XX.XX~SD in
+mathematics and XX.XX~SD in reading. %% PLACEHOLDER
+Classes reporting zero months of remote learning show XX.XX %% PLACEHOLDER
+differences relative to the reference group, a pattern that could
+reflect measurement error in the teacher reports or genuine
+heterogeneity in how schools defined remote instruction.
+
+This within-2021 association should be interpreted with caution.
+Remote learning duration is endogenous: schools in regions with worse
+infrastructure, higher local COVID-19 incidence, or weaker
+administrative capacity were more likely to keep students at home
+for longer, and these factors are also predictive of lower baseline
+achievement. Region fixed effects absorb between-region variation in
+infrastructure and COVID severity, but within-region sorting of students
+across schools with different remote durations remains a concern.
+The estimates in Table~9 are therefore best understood as descriptive
+associations that motivate future research with richer data, rather
+than as causal estimates of a remote-learning treatment effect.

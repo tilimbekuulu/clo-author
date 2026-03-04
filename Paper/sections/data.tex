@@ -1,0 +1,122 @@
+%% data.tex — Section 3: Data and Sample Characteristics
+
+\subsection{State Monitoring of Quality of Primary Education}
+\label{subsec:data_monitoring}
+
+I use two waves of Ukraine's State Monitoring of Quality of Primary Education
+(hereafter, the Monitoring), a nationally representative assessment programme
+that tracks achievement trends, evaluates alignment with national learning
+standards, and examines factors associated with student outcomes. The programme
+assesses fourth-grade students in mathematics and reading, and collects parallel
+questionnaires from students and teachers.
+
+The 2018 baseline sample was drawn from all Ukrainian-language general secondary
+schools with fourth-grade enrolment. Schools were stratified by size and selected
+via prob\-ability-pro\-por\-tional-to-size (PPS) sampling, yielding 366 schools and
+486 classes. Each class was randomly assigned to complete either the mathematics
+or the reading assessment, not both. Fieldwork ran from 17~April to 18~May~2018
+and produced data on 9,077 tested pupils (4,535 in reading; 4,542 in mathematics);
+after standard exclusions for missing data, the analytic sample comprises 9,007
+valid records. All 486 sampled teachers completed questionnaires.
+
+The 2021 wave followed identical sampling and administration procedures. The
+target sample included 365 schools and 485 classes, but pandemic-related logistical
+disruptions reduced the achieved sample to 355 schools and 475 classes. Fieldwork
+ran from 16~April to 17~May~2021, yielding 7,991 tested pupils (4,192 in reading;
+3,799 in mathematics), of which 7,924 records are retained after exclusions.
+A total of 473 teachers completed questionnaires.
+
+In both waves, external proctors administered the assessments under standardised
+protocols with secure handling of materials. Student achievement was scaled using
+item response theory (IRT): dichotomous items followed a two-parameter logistic
+(2PL) model and polytomous items a graded-response model. All responses were placed
+on a common logit scale that ensures comparability across rotated test forms and
+between waves. Logit scores were linearly transformed to a 100--300-point reporting
+scale, with cut-scores at 170, 200, and 230 defining four performance levels
+(below-basic, basic, middle, and high). Because both waves use the same IRT
+parameters and reporting transformation, scores are directly comparable at the
+population level \citep{uceqa2025}. All analyses use survey sampling weights
+and cluster standard errors at the school level (primary sampling unit).
+
+\subsection{Sample Comparability and Attrition}
+\label{subsec:attrition}
+
+Because the design compares repeated cross-sections rather than the same students
+or schools across time, sample comparability across waves is essential.
+Table~\ref{tab:balance} presents balance statistics for the mathematics sample.
+
+First, enrolment fell by roughly 550 students (11\%), and the share of enrolled
+students who sat the test dropped from 90.8 to 85.8~percent, representing
+approximately 720 fewer tested pupils in mathematics. If lower-performing or
+more disadvantaged students disproportionately missed the 2021 assessment, the
+observed cross-cohort gap understates the true learning loss; if pandemic-disrupted
+families were the main absentees, it overstates it. I address this in the
+robustness checks.
+
+Second, most demographic variables are well balanced. Gender composition is virtually
+identical across waves (SMD~=~0.005), and the rural share increased modestly from
+25 to 30~percent (SMD~=~0.099). Age rose by roughly one month (SMD~=~0.161),
+consistent with calendar effects or pandemic-related delays in grade progression.
+
+Third, SES composition shifted substantially. The high-SES tertile grew from
+21 to 35~percent of tested students, while the low- and middle-SES shares both
+declined (combined SMD~=~0.340). By conventional thresholds, an SMD above 0.25
+indicates substantial imbalance; at 0.340, the SES shift exceeds this threshold.
+Because SES is positively correlated with test scores, a 2021 sample skewed toward
+higher-SES students mechanically compresses the cross-cohort gap: the main estimates
+are best read as lower bounds on the true learning loss.
+
+Fourth, school-type composition shifted modestly, with gymnasium and lyceum students
+rising from 9 to 13~percent of the sample and specialised schools falling from
+15 to 12~percent. Books-at-home distributions remained stable (SMD~=~0.145).
+
+The two samples are well matched on demographics but diverge on SES.
+The regression analysis controls for all observed differences; the robustness
+checks in Section~\ref{sec:robustness} assess sensitivity to the compositional
+shift.
+
+\begin{table}[htbp]
+\centering
+\caption{Sample comparability across waves: Mathematics}
+\label{tab:balance}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Variable} & \textbf{2018} & \textbf{2021} & \textbf{SMD} \\
+\midrule
+\multicolumn{4}{l}{\textit{Sample size}} \\
+\quad Enrolled          & 4,956 & 4,409 & \\
+\quad Tested            & 4,501 & 3,781 & \\
+\quad Proportion tested & 0.908 & 0.858 & \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Demographics}} \\
+\quad Female            & 0.497 & 0.499 & 0.005 \\
+\quad Age (months)      & 121.5 & 122.4 & 0.161 \\
+\quad Rural             & 0.254 & 0.298 & 0.099 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{School type (\%)}} \\
+\quad Gymnasium/Lyceum  &  8.7 & 12.6 & \\
+\quad Regular school    & 76.0 & 75.4 & \\
+\quad Specialised       & 15.3 & 12.0 & 0.150 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{SES tertile (\%)}} \\
+\quad Low               & 30.9 & 24.1 & \\
+\quad Middle            & 32.2 & 23.4 & \\
+\quad High              & 21.2 & 34.5 & \\
+\quad Missing           & 15.6 & 18.1 & 0.340 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Books at home (\%)}} \\
+\quad 0--10             & 12.4 & 17.2 & \\
+\quad 11--25            & 35.1 & 35.0 & \\
+\quad 26--100           & 31.5 & 29.3 & \\
+\quad 101--200          & 11.9 & 10.0 & \\
+\quad $>$200            &  7.4 &  7.0 & \\
+\quad Missing           &  1.6 &  1.5 & 0.145 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes}: Weighted means or percentages using survey design weights.
+SMD~= standardised mean difference. Thresholds: SMD~$>$~0.10 may indicate
+imbalance; SMD~$>$~0.25 indicates substantial imbalance.
+\end{tablenotes}
+\end{table}

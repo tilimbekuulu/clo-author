@@ -1,0 +1,176 @@
+%% conclusion.tex — Section 7: Discussion and Conclusion
+%%
+%% No [INSERT] markers in this section.
+%% Fill in heterogeneity findings once Section 6 estimates are available
+%% at the paragraph beginning "The heterogeneity analysis...".
+%% Replace [INSERT: heterogeneity summary] with a 1-2 sentence summary
+%% of the key heterogeneity findings from Section 6 once those results exist.
+
+This paper estimates the cross-cohort learning loss associated with
+COVID-19 school closures among Ukrainian fourth-graders using two waves
+of the State Monitoring of Quality of Primary Education: a pre-pandemic
+wave administered in May~2018 and a post-pandemic wave in May~2021.
+After controlling for region fixed effects, student demographics, school
+type, household book holdings, and SES tertile, mathematics scores fell
+by 0.091~SD and reading scores by 0.099~SD between cohorts. Translated
+to instructional time using the learning-growth benchmarks of
+\citet{hill2008empirical}, these gaps correspond to roughly 0.21 school
+years lost in mathematics and 0.28 school years lost in reading.
+
+\subsection*{Situating the Results in the International Literature}
+
+Ukraine's estimated losses fall at the lower end of the international
+distribution. The meta-analysis by \citet{betthaeuser2023systematic},
+covering 42 studies across 15 countries, reports a pooled average loss
+of 0.14~SD. The survey by \citet{patrinos2022learning} documents a mean
+shortfall of 0.17~SD across 36 national evaluations. Ukraine's point
+estimates of 0.09--0.10~SD are smaller than both benchmarks, though
+not dramatically so and well within the range of individual country
+estimates.
+
+Three features of the Ukrainian context are relevant to this comparison.
+First, the initial closure was relatively brief by international standards:
+schools were shut nationwide for approximately eight weeks in spring~2020
+(12~March to 29~May), compared to full academic-year closures in
+several of the high-loss countries in the meta-analytic sample.
+UNESCO records roughly 18 weeks of full closure and 13 weeks of partial
+closure for Ukraine, placing it in the lower quartile of disruption
+duration among countries with national estimates.
+
+Second, the adaptive quarantine framework introduced in autumn~2020
+permitted many schools to resume at least partial in-person instruction
+during the 2020--21 academic year. The teacher questionnaire responses
+confirm this: 39~percent of students were in classes that experienced
+less than one month of remote instruction in total, and fewer than
+13~percent experienced three or more months. The compressed distribution
+of remote exposure likely attenuated the average loss relative to
+countries that maintained remote instruction throughout a full academic
+year.
+
+Third, and most consequentially for interpretation, the robustness
+analysis in Section~\ref{sec:robustness} establishes that the OLS
+estimates in Table~5 are almost certainly lower bounds. The 2021 sample
+is positively selected on SES: the high-SES share grew from 21 to
+35~percent of tested students. Because SES and achievement are positively
+correlated, this compositional shift compressed the observed cross-cohort
+gap. After reweighting the 2021 sample to the 2018 SES distribution,
+the point estimates grow in absolute magnitude (Table~6). Ukraine's
+apparent position at the lower end of international estimates therefore
+reflects, at least in part, selection into the post-pandemic testing pool
+rather than a distinctively mild educational disruption.
+
+\subsection*{Heterogeneity and Equity}
+
+%% PLACEHOLDER: replace with 2-3 sentence heterogeneity summary once Section 6 estimates are in.
+%% Template: rural interaction finding + SES gradient finding.
+XX.XX rural result. XX.XX SES result.
+
+The pre-existing rural--urban divide documented in Table~5 --- 0.379~SD in
+mathematics, 0.290~SD in reading --- places Ukraine among the middle-income
+countries where spatial inequality in education outcomes is large and
+persistent. Ukraine's PISA~2018 performance sat below the OECD average
+in all tested domains, and within-country inequality was substantial,
+with students in rural and eastern oblasts scoring well below the
+national mean \citep{oecd2019pisa}. The pandemic disruption, whatever
+its average magnitude, fell on a system already marked by significant
+structural heterogeneity.
+
+\subsection*{The War Context}
+
+These estimates should be read as a pre-invasion baseline. Russia's
+full-scale invasion of Ukraine beginning in February~2022 imposed a
+second and far more severe shock on the country's education system.
+Physical destruction of school buildings, mass displacement of students
+and teachers, and the suspension of in-person instruction across wide
+areas of the country have compounded the pandemic learning losses
+estimated here. Post-invasion assessments, when they become available,
+will measure the cumulative effect of two sequential shocks; the
+2018--2021 gap documented in this paper provides the counterfactual
+benchmark against which any such future assessment should be calibrated.
+
+\subsection*{Limitations}
+
+Several limitations bear on the interpretation of the findings.
+
+The cross-cohort design cannot rule out pre-existing trends or
+cohort-specific differences unrelated to COVID-19. The State Monitoring
+Programme was not designed as a longitudinal panel, and I cannot
+directly test the parallel trends assumption that underlies the
+causal interpretation. The stability of estimates across progressively
+richer control sets (Section~\ref{subsec:stability}) and the narrowness
+of the Lee bounds (Section~\ref{subsec:lee}) provide indirect support,
+but a true causal claim requires the absence of unobserved cohort
+differences --- an assumption that the data cannot verify.
+
+The SES compositional shift and the associated attrition from the 2021
+testing wave make the estimates lower bounds on the true learning loss.
+The reweighting and bounding exercises in Section~\ref{sec:robustness}
+bound the range of plausible estimates but cannot pin down the
+counterfactual mean for students who did not participate in the 2021
+assessment.
+
+The conversion of SD-unit gaps to school years of learning loss relies
+on the benchmarks of \citet{hill2008empirical}, which were derived from
+US elementary-school data. Whether those learning-growth rates apply to
+fourth-graders in Ukraine is unknown, and no Ukraine-specific benchmark
+currently exists. The implied school-year losses of 0.21--0.28 years
+should be treated as order-of-magnitude approximations rather than
+precise estimates.
+
+The analysis contains no information on remediation or tutoring activity
+between the end of the 2020--21 academic year and the May~2021 testing
+date. If schools or households engaged in compensatory instruction during
+that window, the observed scores may partially reflect recovery from an
+earlier, larger loss --- meaning the estimates could understate the peak
+disruption even beyond what the selection issues suggest.
+
+Finally, the teacher-reported remote learning durations used in
+Section~\ref{subsec:remote} are subject to recall error and may reflect
+local administrative definitions of ``remote'' that vary across regions
+and school types. The within-2021 associations between duration and
+achievement should be treated as descriptive rather than causal.
+
+\subsection*{Policy Implications}
+
+The findings point to three practical considerations for education policy
+in Ukraine and in comparable middle-income contexts.
+
+Remediation resources should be directed toward the students most likely
+to have experienced the largest losses. Rural students and those from
+low-SES households score substantially below their peers in both
+subjects under normal conditions; the evidence is consistent with these
+gaps having widened further during the pandemic period. Flat,
+universally distributed remediation programmes are unlikely to be
+cost-effective in this environment.
+
+Ukraine lacks domestic learning-growth benchmarks calibrated to its
+curriculum and student population. The Hill et al. conversion factors
+used here are a reasonable proxy but are not an adequate substitute.
+Developing Ukrainian-specific norms for expected annual learning
+progress --- drawing on the State Monitoring Programme data that already
+exist --- would improve the interpretability of future assessments
+considerably.
+
+For the international community studying pandemic learning losses in
+middle-income countries, Ukraine represents one of the few settings
+with pre- and post-pandemic nationally representative data at the
+primary level. The evidence here adds to a thin evidentiary base for
+this income group and suggests that the canonical high-income-country
+estimate of 0.14~SD may not fully characterise the range of national
+experiences. Building comparable monitoring infrastructure in other
+middle-income settings remains an important priority for both research
+and policy.
+
+\subsection*{Future Work}
+
+The most pressing need is post-invasion assessment data. Tracking how
+the 2022 disruption intersects with the pandemic losses estimated here ---
+and whether earlier-affected cohorts exhibit persistent deficits relative
+to their pre-pandemic counterparts --- requires new data collection under
+difficult circumstances. Beyond Ukraine, panel data linking individual
+students across waves, rather than repeated cross-sections, would permit
+a direct test of the parallel-trends assumption and support a cleaner
+separation of pandemic effects from cohort-specific factors. Evidence
+on the effectiveness of targeted remediation programmes in the Ukrainian
+context would help translate the findings here into actionable
+resource-allocation guidance.

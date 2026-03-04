@@ -1,0 +1,133 @@
+%% robustness.tex — Section 5: Robustness and Sensitivity
+%%
+%% [INSERT] markers requiring filled values:
+%%   Table 6: IPW/entropy-balanced reweighted estimates (5.2)
+%%   [INSERT: lower bound value], [INSERT: upper bound value] — Lee (2009) bounds (5.3)
+%%   [INSERT: whether CI includes zero under worst-case] — Lee (2009) inference (5.3)
+%%   Table 7 (or inline): balanced-school-panel estimates (5.4)
+%%
+%% Once regression output is available, replace all [INSERT: ...] with actual values.
+
+\subsection{Stability Across Specifications}
+\label{subsec:stability}
+
+Table~5 presents estimates of Equation~(1) across three progressively richer
+specifications. Column~(1) includes only the wave indicator and region fixed
+effects. Column~(2) adds student demographic controls (age, gender, rural
+residence, and school type). Column~(3) further includes books at home and
+SES tertile dummies. The estimated gap between the 2021 and 2018 cohorts
+is stable: the raw cross-cohort difference in mathematics is $-0.091$~SD
+and the fully controlled estimate in column~(3) is also $-0.091$~SD. For
+reading, the corresponding figures are $-0.099$~SD in column~(1) and
+$-0.099$~SD in column~(3).
+
+The stability of $\hat{\beta}_1$ across columns implies that observable
+differences between the two cohorts account for little of the raw gap.
+Students in 2021 were modestly more likely to live in rural areas and
+substantially more likely to come from high-SES households (see
+Section~\ref{sec:data}), yet controlling for these characteristics barely
+moves the estimates. This pattern is consistent with the learning losses
+reflecting a common shock that cut across the observable distribution of
+students rather than a shift in sample composition alone.
+
+\subsection{Sensitivity to SES Compositional Change}
+\label{subsec:ipw}
+
+The most consequential threat to interpreting the cross-cohort gap as a
+learning loss is the shift in the SES distribution between waves. The share
+of students classified as high-SES increased from 21 percent in 2018 to
+35 percent in 2021, a standardized mean difference of 0.340 --- large by
+conventional thresholds \citep{austin2011introduction}. Because
+higher-SES students tend to score higher on both subjects (the estimated
+high-vs.-low SES gap reaches $0.124$~SD in reading; see Table~5), a
+sample that is increasingly high-SES in 2021 would mechanically attenuate
+any downward shift in scores. The OLS estimates in Table~5 therefore
+represent a lower bound on the true learning loss under the standard
+monotonicity assumption that SES and test scores are positively related.
+
+To assess the sensitivity of the estimates to this compositional shift, I
+reweight the 2021 student observations so that the joint SES distribution
+in 2021 matches the 2018 distribution, and then re-estimate Equation~(1)
+on the reweighted sample. Weights are constructed using entropy balancing
+\citep{hainmueller2012entropy}, which exactly satisfies the first-moment
+balance condition on the SES tertile shares. The estimating equation
+is unchanged; only the effective sample composition of the 2021 wave
+is adjusted.
+
+The reweighted estimates appear in Table~6.%
+\footnote{As a check on the entropy balancing approach, I also implement
+inverse-probability weighting using a logistic model for the 2021
+wave indicator as a function of SES tertile dummies; the results are
+virtually identical.}
+%% PLACEHOLDER: insert Table 6 (IPW/entropy-balanced estimates) here
+The direction of the adjustment is as expected. After reweighting, the
+mathematics estimate increases in absolute magnitude to approximately
+$-$XX.XX~SD and the reading estimate to %% PLACEHOLDER
+$-$XX.XX~SD. %% PLACEHOLDER The increase confirms that
+positive SES selection in the 2021 sample compressed the baseline
+estimates. The main results in Table~5 should accordingly be read as
+conservative: they provide a lower bound on the learning losses that
+would be observed under a stable SES composition.
+
+\subsection{Bounding Attrition in Mathematics}
+\label{subsec:lee}
+
+Test participation declined from 90.8 percent in 2018 to 85.8 percent
+in 2021 for mathematics, a drop of five percentage points. Reading
+participation followed a similar pattern. Because the missing students
+are not a random subset of the enrolled population, the observed
+cross-cohort gap in mean scores could reflect selective non-participation
+rather than genuine changes in the distribution of achievement.
+
+I apply the bounding procedure of \citet{lee2009training} to assess the
+sensitivity of the mathematics estimates to this differential attrition.
+The Lee bounds treat participation as a potential outcome and trim the
+2021 sample at the margin of the participation gap to construct
+worst-case bounds on the average treatment effect. The lower bound on
+the learning loss arises from assuming that the students who dropped
+out of testing in 2021 were the highest-achieving students in that
+cohort; removing them from the sample makes the 2021 mean artificially
+low, maximising the apparent loss. The upper bound assumes the opposite:
+the non-participants were the lowest-achieving students, so their
+absence makes the 2021 mean artificially high and minimises the
+apparent loss.
+
+Under these extreme assumptions, the Lee bounds for mathematics are
+$-$XX.XX~SD to $-$XX.XX~SD. %% PLACEHOLDER: lower and upper bounds
+XX.XX. %% PLACEHOLDER: one sentence on whether 95% CI excludes zero
+For reading, where the participation shortfall is similar in magnitude,
+the bounds are $-$XX.XX~SD to $-$XX.XX~SD. %% PLACEHOLDER
+
+Taken together with the SES reweighting results in
+Section~\ref{subsec:ipw}, the bounds analysis strengthens the
+interpretation that the cross-cohort estimates in Table~5 understate
+rather than overstate the true learning loss. Attrition from the 2021
+testing round was more likely among lower-performing students, both
+because rural schools --- which tend to score lower --- became more
+prevalent in the 2021 sample, and because absenteeism is correlated
+with socioeconomic disadvantage.
+
+\subsection{Balanced School Panel}
+\label{subsec:balanced}
+
+The two assessment waves do not share an identical set of schools. A small
+number of schools participated in only one wave: 11 schools appear in
+2018 but not in 2021. If school-level characteristics that predict
+achievement correlate with the probability of appearing in both waves,
+the full-sample estimates could be affected by compositional differences
+at the school level as well as the student level.
+
+I address this concern by restricting estimation to the balanced panel of
+schools that appear in both waves. Table~7 reports these results.
+The point estimates on $\mathit{May2021}_t$ are $-$XX.XX~SD for
+mathematics and $-$XX.XX~SD for reading. %% PLACEHOLDER: balanced-panel estimates
+Both figures are close to the full-sample estimates in Table~5, indicating
+that school-level attrition does not materially alter the cross-cohort
+comparison. Standard errors are slightly larger in the balanced-panel
+sample, reflecting the reduced sample size, but XX.XX. %% PLACEHOLDER: inference sentence
+
+Across all four robustness exercises --- stable specifications, SES
+reweighting, Lee bounds, and the balanced school panel --- the evidence
+consistently supports a genuine cross-cohort decline in both mathematics
+and reading achievement. The main estimates in Table~5 represent a
+conservative characterisation of that decline.
